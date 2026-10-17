@@ -49,7 +49,7 @@ export default function Layout() {
         <Toolbar>
           {!isDesktop && <IconButton color="inherit" edge="start" onClick={() => setMobileOpen(true)} sx={{ mr: 1 }}><Menu /></IconButton>}
           <Typography variant="h6" sx={{ fontWeight: 800, color: 'primary.main', mr: 3, display: { xs: 'none', sm: 'block' } }}>MOVIEBOX</Typography>
-          <Box component="form" onSubmit={handleSearch} sx={{ flex: 1, maxWidth: 500 }}>
+          <Box component="form" onSubmit={handleSearch} sx={{ flex: 1, minWidth: 0, width: '100%', maxWidth: 500 }}>
             <TextField size="small" fullWidth placeholder="Search movies, TV shows..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} InputProps={{ startAdornment: <InputAdornment position="start"><Search fontSize="small" /></InputAdornment>, sx: { bgcolor: 'rgba(255,255,255,0.08)', borderRadius: 2, '& fieldset': { border: 'none' } } }} />
           </Box>
         </Toolbar>
