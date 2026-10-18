@@ -31,7 +31,7 @@ export default function DetailsDialog({ open, onClose, mediaType, id }) {
           <Box>
             <Box sx={{ display: 'flex', gap: 3, p: 3, flexDirection: { xs: 'column', sm: 'row' } }}>
               {getImageUrl(data.poster_path) ? (
-                <Box component="img" src={getImageUrl(data.poster_path)} alt={data.title || data.name} sx={{ width: { xs: '100%', sm: 200 }, borderRadius: 2, flexShrink: 0 }} />
+                <Box component="img" src={getImageUrl(data.poster_path)} alt={data.title || data.name} sx={{ width: { xs: '50%', sm: 200 }, mx: { xs: 'auto', sm: 0 }, borderRadius: 2, flexShrink: 0 }} />
               ) : (
                 <Box sx={{ width: { xs: '100%', sm: 200 }, aspectRatio: '2/3', bgcolor: '#333', borderRadius: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Typography variant="body2">No Poster</Typography></Box>
               )}
