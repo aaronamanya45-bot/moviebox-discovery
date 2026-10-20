@@ -19,6 +19,10 @@ export default function DetailsDialog({ open, onClose, mediaType, id }) {
 
   const saved = data && isInWatchlist(mediaType, data.id);
 
+    // Find the official YouTube trailer
+  const trailer = data?.videos?.results?.find(
+    (vid) => vid.site === 'YouTube' && (vid.type === 'Trailer' || vid.type === 'Teaser')
+  );
   return (
     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
       <DialogContent sx={{ p: 0, bgcolor: '#1a1a1a' }}>
@@ -54,6 +58,20 @@ export default function DetailsDialog({ open, onClose, mediaType, id }) {
                 </Button>
               </Box>
             </Box>
+                       {trailer && (
+              <Box px={3} pb={3}>
+                <Typography variant="h6" gutterBottom>Official Trailer</Typography>
+                <Box sx={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: 2, boxShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>
+                  <iframe
+                    src={`https://www.youtube.com/embed/${trailer.key}`}
+                    title="YouTube video player"
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </Box>
+              </Box>
+            )}
             <Box px={3} pb={3}>
               <Typography variant="h6" gutterBottom>Overview</Typography>
               <Typography variant="body1" color="text.secondary" lineHeight={1.7}>{data.overview || 'No overview available.'}</Typography>

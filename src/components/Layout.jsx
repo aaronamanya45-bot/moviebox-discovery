@@ -29,7 +29,7 @@ export default function Layout() {
 
   const drawerContent = (
     <Box sx={{ pt: 2 }}>
-      <Typography variant="h6" sx={{ px: 2, pb: 2, fontWeight: 800, color: 'primary.main' }}>MOVIEBOX</Typography>
+      <Typography variant="h6" sx={{ px: 2, pb: 2, fontWeight: 800, color: 'primary.main' }}>AARONIX</Typography>
       <List>
         {NAV_ITEMS.map(item => (
           <ListItem key={item.path} disablePadding>
@@ -48,7 +48,7 @@ export default function Layout() {
       <AppBar position="fixed" sx={{ zIndex: theme.zIndex.drawer + 1, backdropFilter: 'blur(10px)', backgroundColor: 'rgba(15, 15, 15, 0.8)' }}>
         <Toolbar>
           {!isDesktop && <IconButton color="inherit" edge="start" onClick={() => setMobileOpen(true)} sx={{ mr: 1 }}><Menu /></IconButton>}
-          <Typography variant="h6" sx={{ fontWeight: 800, color: 'primary.main', mr: 3, display: { xs: 'none', sm: 'block' } }}>MOVIEBOX</Typography>
+          <Typography variant="h6" sx={{ fontWeight: 800, color: 'primary.main', mr: 3, display: { xs: 'none', sm: 'block' } }}>AARONIX</Typography>
           <Box component="form" onSubmit={handleSearch} sx={{ flex: 1, minWidth: 0, width: '100%', maxWidth: 500 }}>
             <TextField size="small" fullWidth placeholder="Search movies, TV shows..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} InputProps={{ startAdornment: <InputAdornment position="start"><Search fontSize="small" /></InputAdornment>, sx: { bgcolor: 'rgba(255,255,255,0.08)', borderRadius: 2, '& fieldset': { border: 'none' } } }} />
           </Box>
