@@ -46,3 +46,4 @@ This project was built as a university assignment to demonstrate React component
 This product uses the TMDB API but is not endorsed or certified by TMDB. All movie posters and metadata are provided by The Movie Database (TMDB). 
  
  
+ 
