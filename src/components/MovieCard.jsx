@@ -43,4 +43,4 @@ export default function MovieCard({ item, onClick }) {
       </CardContent>
     </Card>
   );
-}
+} 
