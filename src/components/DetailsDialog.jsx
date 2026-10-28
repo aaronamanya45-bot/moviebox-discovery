@@ -81,4 +81,4 @@ export default function DetailsDialog({ open, onClose, mediaType, id }) {
       </DialogContent>
     </Dialog>
   );
-}
+} 
