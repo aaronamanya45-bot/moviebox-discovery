@@ -27,4 +27,4 @@ export function WatchlistProvider({ children }) {
   );
 }
 
-export const useWatchlist = () => useContext(WatchlistContext);
+export const useWatchlist = () => useContext(WatchlistContext); 
