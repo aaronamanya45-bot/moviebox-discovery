@@ -20,4 +20,4 @@ export const fetchTVGenres = () => api.get('/genre/tv/list').then(r => r.data.ge
 export const fetchMoviesByGenre = (genreId, page = 1) => api.get('/discover/movie', { params: { with_genres: genreId, page, sort_by: 'popularity.desc' } }).then(r => r.data.results);
 export const fetchTVByGenre = (genreId, page = 1) => api.get('/discover/tv', { params: { with_genres: genreId, page, sort_by: 'popularity.desc' } }).then(r => r.data.results);
 export const searchMulti = (query, page = 1) => api.get('/search/multi', { params: { query, page, include_adult: false } }).then(r => r.data.results.filter(item => item.media_type !== 'person'));
-export const fetchDetails = (mediaType, id) => api.get(`/${mediaType}/${id}`, { params: { append_to_response: 'credits,videos' } }).then(r => r.data);
+export const fetchDetails = (mediaType, id) => api.get(`/${mediaType}/${id}`, { params: { append_to_response: 'credits,videos' } }).then(r => r.data); 
